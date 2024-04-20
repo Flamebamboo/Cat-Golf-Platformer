@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://t6l5ssr22lc3"]
+
+[ext_resource type="Texture2D" uid="uid://566r7a7mtvhl" path="res://sprite/pixil-frame-0-2.png" id="1_r1tp2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gash"]
+atlas = ExtResource("1_r1tp2")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hplvy"]
+atlas = ExtResource("1_r1tp2")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3r6b0"]
+atlas = ExtResource("1_r1tp2")
+region = Rect2(40, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0ox4"]
+atlas = ExtResource("1_r1tp2")
+region = Rect2(60, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0j8xu"]
+atlas = ExtResource("1_r1tp2")
+region = Rect2(80, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80i64"]
+atlas = ExtResource("1_r1tp2")
+region = Rect2(100, 0, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i5ycl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gash")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hplvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3r6b0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0ox4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0j8xu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80i64")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="2dcatanimate" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.90735e-06, 1)
+scale = Vector2(8.3, 8.3)
+sprite_frames = SubResource("SpriteFrames_i5ycl")
+autoplay = "default"
+frame_progress = 0.75802

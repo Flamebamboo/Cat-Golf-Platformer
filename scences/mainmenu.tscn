@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://pvl6w3qa7xtg"]
+
+[ext_resource type="Texture2D" uid="uid://ct8dl4i34q1o2" path="res://sprite/background/pixil-frame-0-2 (2).png" id="1_esc1d"]
+[ext_resource type="PackedScene" uid="uid://bl7w0uyw74gtb" path="res://sprite/background/animatedcatforbg.tscn" id="2_36ovv"]
+[ext_resource type="PackedScene" uid="uid://gao2bhhltx3w" path="res://scences/button.tscn" id="3_j1j4i"]
+
+[sub_resource type="SystemFont" id="SystemFont_hr0px"]
+font_names = PackedStringArray("Impact")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_esc1d")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -241.5
+offset_top = -121.5
+offset_right = 241.5
+offset_bottom = 121.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="cat" type="Label" parent="VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -383.0
+offset_top = -121.5
+offset_right = 382.0
+offset_bottom = -29.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.584314, 0.584314, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 24
+theme_override_constants/shadow_outline_size = 30
+theme_override_fonts/font = SubResource("SystemFont_hr0px")
+theme_override_font_sizes/font_size = 67
+text = "CAT GOLF PLATFORMER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2dcatanimate" parent="." instance=ExtResource("2_36ovv")]
+position = Vector2(470, 414)
+
+[node name="Control" parent="." instance=ExtResource("3_j1j4i")]
+layout_mode = 1
+offset_left = -15.0
+offset_top = 26.0
+offset_right = -15.0
+offset_bottom = 26.0

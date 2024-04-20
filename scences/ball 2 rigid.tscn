@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxe0emetjr45i"]
+
+[ext_resource type="Texture2D" uid="uid://dqdyrg7nlgcug" path="res://sprite/golf ball png.png" id="1_ahj34"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cpxbf"]
+radius = 7.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(17, -9)
+mass = 5.0
+gravity_scale = 0.5
+linear_velocity = Vector2(20, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(-17, 9)
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("1_ahj34")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-16, 6)
+shape = SubResource("CircleShape2D_cpxbf")
